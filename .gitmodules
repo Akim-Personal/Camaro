@@ -1,0 +1,3 @@
+[submodule "ThirdParty/Box2D"]
+	path = ThirdParty/Box2D
+	url = git://github.com/Akim-Personal/Box2D
