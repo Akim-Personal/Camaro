@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{ec36625e-e5b9-4935-8b28-a485a6348cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{12b85968-615d-4fbd-ac5c-e2982a299870}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{3950afae-ebc9-4f6b-8786-d4fc9ac926d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Launcher">
+      <UniqueIdentifier>{2a419650-4ecd-42aa-8573-4076d7b206d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{529a5eaa-fbef-40e0-b008-f464290c0a44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{5cded44d-479a-481b-9120-a6ed704e1041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\DX">
+      <UniqueIdentifier>{78033cb7-6bdb-4628-8386-afcd0bb1dfa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\DX">
+      <UniqueIdentifier>{071039d3-2e53-49e4-8d85-4a19a1c77d7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Instances">
+      <UniqueIdentifier>{68e6388c-02c1-40ed-85a6-9fd44490ef34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{a416dffa-7d53-49a3-a529-8bcf75adad73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Memory">
+      <UniqueIdentifier>{0dc5cc68-5e60-46e7-baad-1c94f589e561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Threading">
+      <UniqueIdentifier>{450f3175-ba1c-4fa6-8660-9c9b036a0dbe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\ProjectDefines.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\World.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\DX\DXKeyboardInput.h">
+      <Filter>Input\DX</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\DX\DXGamepadInput.h">
+      <Filter>Input\DX</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\InputManager.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\PhysicsRenderer.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\Physics.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\PhysicsCommon.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\DX\DXRenderer.h">
+      <Filter>Renderer\DX</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\DX\DXDebugRenderer.h">
+      <Filter>Renderer\DX</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\InputDevice.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\InstanceManager.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Instances\Instance.h">
+      <Filter>Game\Instances</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Instances\Solid.h">
+      <Filter>Game\Instances</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Instances\InstanceProperties.h">
+      <Filter>Game\Instances</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Instances\Dynamic.h">
+      <Filter>Game\Instances</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Instances\Bunny.h">
+      <Filter>Game\Instances</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Instances\TestObject.h">
+      <Filter>Game\Instances</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Log.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\God.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\PhysicsModifier.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Clock.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Memory\MemoryAllocator.h">
+      <Filter>System\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\String.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Renderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Threading\Thread.h">
+      <Filter>System\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\DX\DXRenderProxy.h">
+      <Filter>Renderer\DX</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\PhysicsProxy.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\DX\DXRenderQueue.h">
+      <Filter>Renderer\DX</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game\World.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\DX\DXGamepadInput.cpp">
+      <Filter>Input\DX</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\DX\DXKeyboardInput.cpp">
+      <Filter>Input\DX</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\InputManager.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Launcher\Main.cpp">
+      <Filter>Launcher</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\Physics.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\PhysicsRenderer.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\DX\DXDebugRenderer.cpp">
+      <Filter>Renderer\DX</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\DX\DXRenderer.cpp">
+      <Filter>Renderer\DX</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\InstanceManager.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Instances\Solid.cpp">
+      <Filter>Game\Instances</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Instances\Dynamic.cpp">
+      <Filter>Game\Instances</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Instances\Bunny.cpp">
+      <Filter>Game\Instances</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Instances\TestObject.cpp">
+      <Filter>Game\Instances</Filter>
+    </ClCompile>
+    <ClCompile Include="System\God.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Log.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\PhysicsModifier.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Clock.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Memory\MemoryAllocator.cpp">
+      <Filter>System\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Threading\Thread.cpp">
+      <Filter>System\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\DX\DXRenderProxy.cpp">
+      <Filter>Renderer\DX</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\PhysicsProxy.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\DX\DXRenderQueue.cpp">
+      <Filter>Renderer\DX</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

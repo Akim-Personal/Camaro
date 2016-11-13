@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\Common.h" />
+    <ClInclude Include="Common\ProjectDefines.h" />
+    <ClInclude Include="Common\String.h" />
+    <ClInclude Include="Game\InstanceManager.h" />
+    <ClInclude Include="Game\Instances\Bunny.h" />
+    <ClInclude Include="Game\Instances\Dynamic.h" />
+    <ClInclude Include="Game\Instances\Instance.h" />
+    <ClInclude Include="Game\Instances\InstanceProperties.h" />
+    <ClInclude Include="Game\Instances\Solid.h" />
+    <ClInclude Include="Game\Instances\TestObject.h" />
+    <ClInclude Include="Game\World.h" />
+    <ClInclude Include="Input\DX\DXGamepadInput.h" />
+    <ClInclude Include="Input\DX\DXKeyboardInput.h" />
+    <ClInclude Include="Input\InputDevice.h" />
+    <ClInclude Include="Input\InputManager.h" />
+    <ClInclude Include="Physics\Physics.h" />
+    <ClInclude Include="Physics\PhysicsCommon.h" />
+    <ClInclude Include="Physics\PhysicsModifier.h" />
+    <ClInclude Include="Physics\PhysicsProxy.h" />
+    <ClInclude Include="Physics\PhysicsRenderer.h" />
+    <ClInclude Include="Renderer\DX\DXDebugRenderer.h" />
+    <ClInclude Include="Renderer\DX\DXRenderer.h" />
+    <ClInclude Include="Renderer\DX\DXRenderProxy.h" />
+    <ClInclude Include="Renderer\DX\DXRenderQueue.h" />
+    <ClInclude Include="Renderer\Renderer.h" />
+    <ClInclude Include="System\Clock.h" />
+    <ClInclude Include="System\God.h" />
+    <ClInclude Include="System\Log.h" />
+    <ClInclude Include="System\Memory\MemoryAllocator.h" />
+    <ClInclude Include="System\Threading\Thread.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\Common.cpp" />
+    <ClCompile Include="Game\InstanceManager.cpp" />
+    <ClCompile Include="Game\Instances\Bunny.cpp" />
+    <ClCompile Include="Game\Instances\Dynamic.cpp" />
+    <ClCompile Include="Game\Instances\Solid.cpp" />
+    <ClCompile Include="Game\Instances\TestObject.cpp" />
+    <ClCompile Include="Game\World.cpp" />
+    <ClCompile Include="Input\DX\DXGamepadInput.cpp" />
+    <ClCompile Include="Input\DX\DXKeyboardInput.cpp" />
+    <ClCompile Include="Input\InputManager.cpp" />
+    <ClCompile Include="Launcher\Main.cpp" />
+    <ClCompile Include="Physics\Physics.cpp" />
+    <ClCompile Include="Physics\PhysicsModifier.cpp" />
+    <ClCompile Include="Physics\PhysicsProxy.cpp" />
+    <ClCompile Include="Physics\PhysicsRenderer.cpp" />
+    <ClCompile Include="Renderer\DX\DXDebugRenderer.cpp" />
+    <ClCompile Include="Renderer\DX\DXRenderer.cpp" />
+    <ClCompile Include="Renderer\DX\DXRenderProxy.cpp" />
+    <ClCompile Include="Renderer\DX\DXRenderQueue.cpp" />
+    <ClCompile Include="System\Clock.cpp" />
+    <ClCompile Include="System\God.cpp" />
+    <ClCompile Include="System\Log.cpp" />
+    <ClCompile Include="System\Memory\MemoryAllocator.cpp" />
+    <ClCompile Include="System\Threading\Thread.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6D28A9D9-06ED-4FCB-9078-058139E96CCD}</ProjectGuid>
+    <RootNamespace>Camaro</RootNamespace>
+    <ProjectName>Camaro</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\Bin\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\BinTemp\$(PlatformName)\$(Configuration)\$(TargetName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\Bin\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\BinTemp\$(PlatformName)\$(Configuration)\$(TargetName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;..\;$(SolutionDir)\ThirdParty;$(DXSDK_DIR)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\Bin\$(PlatformName)\$(Configuration)\;$(DXSDK_DIR)\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>NotSet</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <BuildLog>
+      <Path>$(IntDir)\$(MSBuildProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.\;..\;$(SolutionDir)\ThirdParty;$(DXSDK_DIR)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\Bin\$(PlatformName)\$(Configuration)\;$(DXSDK_DIR)\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <BuildLog>
+      <Path>$(IntDir)\$(MSBuildProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
