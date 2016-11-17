@@ -111,6 +111,8 @@ link_libraries(
 
 add_executable(Camaro ${CAMARO_ALL})
 
+add_dependencies(Camaro Box2D)
+
 set_target_properties(Camaro PROPERTIES LINK_FLAGS_DEBUG "/SUBSYSTEM:WINDOWS")
 set_target_properties(Camaro PROPERTIES LINK_FLAGS_RELWITHDEBINFO "/SUBSYSTEM:WINDOWS")
 set_target_properties(Camaro PROPERTIES LINK_FLAGS_RELEASE "/SUBSYSTEM:WINDOWS")
