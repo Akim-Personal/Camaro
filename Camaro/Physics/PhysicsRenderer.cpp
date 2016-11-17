@@ -62,4 +62,9 @@ void CPhysicsRenderer::DrawTransform(const b2Transform& xf)
 	m_renderQueue->RC_DrawTransform(xf);
 }
 
+void CPhysicsRenderer::DrawPoint(const b2Vec2& p, float32 size, const b2Color& color)
+{
+	/*not implemented*/
+}
+
 #endif

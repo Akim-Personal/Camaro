@@ -13,8 +13,8 @@ class CPhysicsProxy;
 class CInstanceManager
 {
 private:
-	typedef std::map<char*, CSolid*> TSolidsMap;
-	typedef std::map<char*, CDynamic*> TDynamicsMap;
+	typedef std::map<std::string, CSolid*> TSolidsMap;
+	typedef std::map<std::string, CDynamic*> TDynamicsMap;
 
 public:
 	CInstanceManager();
