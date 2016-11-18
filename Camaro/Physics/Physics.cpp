@@ -7,8 +7,8 @@
 #endif
 
 #include "PhysicsModifier.h"
-#include "Game/World.h"
-#include "Game/InstanceManager.h"
+#include <Game/World.h>
+#include <Game/InstanceManager.h>
 
 CPhysics::CPhysics()
 	:

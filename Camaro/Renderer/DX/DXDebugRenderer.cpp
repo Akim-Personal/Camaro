@@ -2,9 +2,9 @@
 
 #ifdef USE_DXRENDERER
 
-#include "Game/World.h"
-#include "../Renderer.h"
-#include "Physics/PhysicsCommon.h"
+#include <Game/World.h>
+#include <Renderer/Renderer.h>
+#include <Physics/PhysicsCommon.h>
 
 #define Z_PLANE 0.0f
 

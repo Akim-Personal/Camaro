@@ -1,7 +1,6 @@
-#ifndef _CPHYSICSMODIFIER_H_
-#define _CPHYSICSMODIFIER_H_
+#pragma once
 
-#include "System/God.h"
+#include <System/God.h>
 
 #ifdef USE_BOX2D
 
@@ -17,5 +16,3 @@ public:
 };
 
 #endif
-
-#endif // _CPHYSICSMODIFIER_H_

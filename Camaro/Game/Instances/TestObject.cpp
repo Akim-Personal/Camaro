@@ -1,8 +1,8 @@
-#include "Game/Instances/TestObject.h"
+#include "TestObject.h"
 
 #ifdef USE_BOX2D
-#	include "Physics/Physics.h"
-#	include "Physics/PhysicsProxy.h"
+#	include <Physics/Physics.h>
+#	include <Physics/PhysicsProxy.h>
 #endif
 
 CTestObject::CTestObject(char* name)

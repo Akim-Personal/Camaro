@@ -1,10 +1,10 @@
 #include "World.h"	
 
-#include "Input/InputManager.h"
+#include <Input/InputManager.h>
 #include "InstanceManager.h"
 
 #ifdef USE_BOX2D
-#	include "Physics/Physics.h"
+#	include <Physics/Physics.h>
 #endif
 
 #define FPS_UPDATE_INTERVAL CLOCK_TICKS_AS_MS(500)

@@ -1,5 +1,4 @@
-#ifndef _INSTANCEPROPERTIES_H_
-#define _INSTANCEPROPERTIES_H_
+#pragma once
 
 enum EInstanceShapes
 {
@@ -27,5 +26,3 @@ struct SDynamicProperties
 	float posY;
 	float radius;
 };
-
-#endif // _INSTANCEPROPERTIES_H_

@@ -1,7 +1,6 @@
-#ifndef _CTESTOBJECT_H_
-#define _CTESTOBJECT_H_
+#pragma once
 
-#include "Game/Instances/Dynamic.h"
+#include "Dynamic.h"
 
 class CTestObject : public CDynamic
 {
@@ -25,5 +24,3 @@ private:
 	CPhysicsProxy* m_physicsProxy3;
 #endif
 };
-
-#endif // _CTESTOBJECT_H_

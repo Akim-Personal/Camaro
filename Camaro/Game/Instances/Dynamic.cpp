@@ -1,12 +1,12 @@
-#include "Game/Instances/Dynamic.h"
+#include "Dynamic.h"
 
 #ifdef USE_BOX2D
-#	include "Physics/PhysicsCommon.h"
-#	include "Physics/PhysicsProxy.h"
+#	include <Physics/PhysicsCommon.h>
+#	include <Physics/PhysicsProxy.h>
 #endif
 
 #ifdef USE_DXRENDERER
-#	include "Renderer/DX/DXRenderProxy.h"
+#	include <Renderer/DX/DXRenderProxy.h>
 #endif
 
 CDynamic::CDynamic(char* name)

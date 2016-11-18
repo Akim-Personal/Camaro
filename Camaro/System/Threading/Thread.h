@@ -1,5 +1,4 @@
-#ifndef _THREAD_H_
-#define _THREAD_H_
+#pragma once
 
 #include "../God.h"
 
@@ -41,5 +40,3 @@ private:
 };
 
 #endif
-
-#endif // _THREAD_H_

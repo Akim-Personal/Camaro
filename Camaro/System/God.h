@@ -1,7 +1,6 @@
-#ifndef _GOD_H_
-#define _GOD_H_
+#pragma once
 
-#include "Common/Common.h"
+#include <Common/Common.h>
 
 #include "Memory/MemoryAllocator.h"
 #include "Clock.h"
@@ -45,5 +44,3 @@ private:
 	static bool isAlive;
 	static bool m_shutdownRequested;
 };
-
-#endif // _GOD_H_

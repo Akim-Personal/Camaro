@@ -1,7 +1,6 @@
-#ifndef _CDYNAMIC_H_
-#define _CDYNAMIC_H_
+#pragma once
 
-#include "Game/Instances/Instance.h"
+#include "Instance.h"
 
 class CDynamic : public IInstance
 {
@@ -42,5 +41,3 @@ protected:
 	DXRenderProxy* m_renderProxy;
 #endif
 };
-
-#endif // _CDYNAMIC_H_

@@ -1,10 +1,10 @@
 #include "God.h"
 
-#include "Game/World.h"
+#include <Game/World.h>
 #ifdef USE_BOX2D
-#	include "Physics/Physics.h"
+#	include <Physics/Physics.h>
 #endif
-#include "Renderer/Renderer.h"
+#include <Renderer/Renderer.h>
 
 CClock* GOD::m_clock = NULL;
 CLog* GOD::m_log = NULL;

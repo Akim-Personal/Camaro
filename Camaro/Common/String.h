@@ -1,5 +1,4 @@
-#ifndef _STRING_H_
-#define _STRING_H_
+#pragma once
 
 #include "Common.h"
 
@@ -7,5 +6,3 @@
 //{
 //	// implement a safe method by using snprintf here
 //}
-
-#endif // _STRING_H_

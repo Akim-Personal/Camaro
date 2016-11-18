@@ -1,7 +1,6 @@
-#ifndef _DXGAMEPADINPUT_H_
-#define _DXGAMEPADINPUT_H_
+#pragma once
 
-#include "Input/InputDevice.h"
+#include <Input/InputDevice.h>
 
 #ifdef USE_XINPUT
 
@@ -62,5 +61,3 @@ private:
 };
 
 #endif
-
-#endif // _DXGAMEPADINPUT_H_

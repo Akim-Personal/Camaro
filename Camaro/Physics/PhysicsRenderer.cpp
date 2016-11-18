@@ -2,8 +2,8 @@
 
 #if defined(USE_BOX2D) && defined(USE_DXRENDERER)
 
-#include "Renderer/Renderer.h"
-#include "Renderer/DX/DXRenderQueue.h"
+#include <Renderer/Renderer.h>
+#include <Renderer/DX/DXRenderQueue.h>
 
 CPhysicsRenderer::CPhysicsRenderer()
 	: b2Draw()

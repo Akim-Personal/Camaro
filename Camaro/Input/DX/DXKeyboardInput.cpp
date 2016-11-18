@@ -2,9 +2,9 @@
 
 #ifdef USE_DIRECTINPUT
 
-#include "Renderer/Renderer.h"
-#include "Game/World.h"
-#include "../InputManager.h"
+#include <Renderer/Renderer.h>
+#include <Game/World.h>
+#include <Input/InputManager.h>
 
 DXKeyboardInput::DXKeyboardInput()
 	: IInputDevice()

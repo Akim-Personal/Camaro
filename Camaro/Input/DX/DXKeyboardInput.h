@@ -1,7 +1,6 @@
-#ifndef _DXKEYBOARDINPUT_H_
-#define _DXKEYBOARDINPUT_H_
+#pragma once
 
-#include "Input/InputDevice.h"
+#include <Input/InputDevice.h>
 
 #ifdef USE_DIRECTINPUT
 
@@ -25,5 +24,3 @@ private:
 };
 
 #endif
-
-#endif // _DXKEYBOARDINPUT_H_

@@ -1,7 +1,6 @@
-#ifndef _DXDEBUGRENDERER_H_
-#define _DXDEBUGRENDERER_H_
+#pragma once
 
-#include "System/God.h"
+#include <System/God.h>
 
 #ifdef USE_DXRENDERER
 
@@ -40,5 +39,3 @@ private:
 };
 
 #endif
-
-#endif // _DXDEBUGRENDERER_H_

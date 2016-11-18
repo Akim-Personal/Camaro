@@ -1,7 +1,6 @@
-#ifndef _CSOLID_H_
-#define _CSOLID_H_
+#pragma once
 
-#include "Game/Instances/Instance.h"
+#include "Instance.h"
 
 class CSolid : public IInstance
 {
@@ -42,5 +41,3 @@ protected:
 	DXRenderProxy* m_renderProxy;
 #endif
 };
-
-#endif // _CSOLID_H_

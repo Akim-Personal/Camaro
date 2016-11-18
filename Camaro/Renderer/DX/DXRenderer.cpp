@@ -3,8 +3,8 @@
 #ifdef USE_DXRENDERER
 
 #ifdef USE_BOX2D
-#	include "Physics/Physics.h"
-#	include "Physics/PhysicsRenderer.h"
+#	include <Physics/Physics.h>
+#	include <Physics/PhysicsRenderer.h>
 #endif
 
 #include "DXDebugRenderer.h"

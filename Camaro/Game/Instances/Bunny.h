@@ -1,7 +1,6 @@
-#ifndef _CBUNNY_H_
-#define _CBUNNY_H_
+#pragma once
 
-#include "Game/Instances/Dynamic.h"
+#include "Dynamic.h"
 
 class CBunny : public CDynamic
 {
@@ -20,5 +19,3 @@ public:
 private:
 	CBunny() { ; }
 };
-
-#endif // _CBUNNY_H_

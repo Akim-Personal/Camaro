@@ -1,5 +1,4 @@
-#ifndef _PROJECTDEFINES_H_
-#define _PROJECTDEFINES_H_
+#pragma once
 
 #define GAME_NAME "Camaro"
 
@@ -32,5 +31,3 @@ typedef unsigned long long uint64;
 
 #pragma warning(disable: 4100)	// The formal parameter is not referenced in the body of the function.
 #pragma warning(disable: 4189)	// A variable is declared and initialized but not used. 
-
-#endif // _PROJECTDEFINES_H_

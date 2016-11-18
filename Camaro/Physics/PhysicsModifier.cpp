@@ -5,8 +5,8 @@
 #include "Physics.h"
 #include "PhysicsProxy.h"
 
-#include "Game/World.h"
-#include "Game/InstanceManager.h"
+#include <Game/World.h>
+#include <Game/InstanceManager.h>
 
 void CPhysicsModifier::Jump(float strength)
 {

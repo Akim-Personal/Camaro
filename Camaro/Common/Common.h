@@ -1,5 +1,4 @@
-#ifndef _COMMON_H_
-#define _COMMON_H_
+#pragma once
 
 #include "ProjectDefines.h"
 
@@ -25,5 +24,3 @@
 #include <vector>
 
 #include "String.h"
-
-#endif // _COMMON_H_

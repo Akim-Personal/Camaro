@@ -1,7 +1,6 @@
-#ifndef _CLOG_H_
-#define _CLOG_H_
+#pragma once
 
-#include "Common/Common.h"
+#include <Common/Common.h>
 
 #define LogWarning GOD::m_log->Warning
 #define LogError GOD::m_log->Error
@@ -12,8 +11,8 @@
 class CLog
 {
 public:
-	CLog() { ; }
-	~CLog() { ; }
+	CLog() {}
+	~CLog() {}
 
 	void Warning(const char* string, ...);
 	void Error(const char* string, ...);
@@ -24,5 +23,3 @@ public:
 private:
 	void WriteMessage(const char* title, const char* msg);
 };
-
-#endif // _CLOG_H_

@@ -1,6 +1,6 @@
 #include "MemoryAllocator.h"
 
-#include "../God.h"
+#include <System/God.h>
 
 bool CMemoryAllocator::m_isActive = false;
 size_t CMemoryAllocator::m_memoryUsed = 0;

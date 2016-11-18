@@ -1,7 +1,6 @@
-#ifndef _DXRENDERER_H_
-#define _DXRENDERER_H_
+#pragma once
 
-#include "System/God.h"
+#include <System/God.h>
 
 #ifdef USE_DXRENDERER
 
@@ -61,5 +60,3 @@ private:
 };
 
 #endif
-
-#endif // _DXRENDERER_H_

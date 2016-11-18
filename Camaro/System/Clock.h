@@ -1,7 +1,6 @@
-#ifndef _CCLOCK_H_
-#define _CCLOCK_H_
+#pragma once
 
-#include "Common/Common.h"
+#include <Common/Common.h>
 #include <time.h>
 
 #define CLOCK GOD::m_clock
@@ -35,5 +34,3 @@ private:
 	clock_t m_lastGameTimeStamp;
 	clock_t m_gameTime;
 };
-
-#endif // _CCLOCK_H_

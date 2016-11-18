@@ -1,7 +1,6 @@
-#ifndef _IINSTANCE_H_
-#define _IINSTANCE_H_
+#pragma once
 
-#include "System/God.h"
+#include <System/God.h>
 
 #include "InstanceProperties.h"
 
@@ -36,5 +35,3 @@ struct IInstance
 
 	virtual void GetSoundProxy() const = 0;
 };
-
-#endif // _IINSTANCE_H_

@@ -2,9 +2,9 @@
 
 #ifdef USE_DXRENDERER
 
-#include "Physics/PhysicsCommon.h"
-#include "Renderer/Renderer.h"
-#include "Renderer/DX/DXDebugRenderer.h"
+#include <Physics/PhysicsCommon.h>
+#include <Renderer/Renderer.h>
+#include "DXDebugRenderer.h"
 
 #define RENDER_QUEUE_SIZE 1024 * 1024	// 1 MB
 

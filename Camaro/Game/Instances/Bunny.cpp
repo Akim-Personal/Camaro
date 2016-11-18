@@ -1,8 +1,8 @@
-#include "Game/Instances/Bunny.h"
+#include "Bunny.h"
 
 #ifdef USE_BOX2D
-#	include "Physics/Physics.h"
-#	include "Physics/PhysicsProxy.h"
+#	include <Physics/Physics.h>
+#	include <Physics/PhysicsProxy.h>
 #endif
 
 CBunny::CBunny(char* name)

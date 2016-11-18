@@ -1,7 +1,6 @@
-#ifndef _CRENDERER_H_
-#define _CRENDERER_H_
+#pragma once
 
-#include "System/God.h"
+#include <System/God.h>
 
 #ifdef USE_DXRENDERER
 
@@ -51,5 +50,3 @@ public:
 };
 
 #endif
-
-#endif // _CRENDERER_H_

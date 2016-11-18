@@ -1,7 +1,6 @@
-#ifndef _CMEMORYALLOCATOR_H_
-#define _CMEMORYALLOCATOR_H_
+#pragma once
 
-#include "Common/Common.h"
+#include <Common/Common.h>
 
 #define MEMORY_STRING_SIZE 16
 #define MEM_ALLOCATOR GOD::m_memoryAllocator
@@ -31,5 +30,3 @@ protected:
 	static uint m_allocationsCount;
 
 };
-
-#endif // _CMEMORYALLOCATOR_H_

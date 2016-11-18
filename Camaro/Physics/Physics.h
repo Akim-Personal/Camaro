@@ -1,7 +1,6 @@
-#ifndef _CPHYSICS_H_
-#define _CPHYSICS_H_
+#pragma once
 
-#include "System/God.h"
+#include <System/God.h>
 
 #ifdef USE_BOX2D
 
@@ -44,5 +43,3 @@ private:
 };
 
 #endif
-
-#endif // _CPHYSICS_H_

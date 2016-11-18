@@ -1,7 +1,6 @@
-#ifndef _CINSTANCEMANAGER_H_
-#define _CINSTANCEMANAGER_H_
+#pragma once
 
-#include "System/God.h"
+#include <System/God.h>
 
 class CSolid;
 class CDynamic;
@@ -37,5 +36,3 @@ private:
 	TSolidsMap m_solids;
 	TDynamicsMap m_dynamics;
 };
-
-#endif // _CINSTANCEMANAGER_H_

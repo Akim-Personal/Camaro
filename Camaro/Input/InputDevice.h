@@ -1,7 +1,6 @@
-#ifndef _IINPUTDEVICE_H_
-#define _IINPUTDEVICE_H_
+#pragma once
 
-#include "System/God.h"
+#include <System/God.h>
 
 struct IInputDevice
 {
@@ -11,5 +10,3 @@ struct IInputDevice
 	virtual void GetInputState() = 0;
 	virtual void CleanUp() = 0;
 };
-
-#endif // _IINPUTDEVICE_H_

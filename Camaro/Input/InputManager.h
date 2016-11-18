@@ -1,7 +1,6 @@
-#ifndef _CINPUTMANAGER_H_
-#define _CINPUTMANAGER_H_
+#pragma once
 
-#include "System/God.h"
+#include <System/God.h>
 
 struct CONTROLLER_STATE;
 
@@ -62,5 +61,3 @@ private:
 	int m_gamepadCount;
 #endif
 };
-
-#endif // _CINPUTMANAGER_H_

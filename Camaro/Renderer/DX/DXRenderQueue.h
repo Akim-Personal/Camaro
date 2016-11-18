@@ -1,7 +1,6 @@
-#ifndef _DXRENDERQUEUE_H_
-#define _DXRENDERQUEUE_H_
+#pragma once
 
-#include "System/God.h"
+#include <System/God.h>
 
 #ifdef USE_DXRENDERER
 
@@ -82,5 +81,3 @@ public:
 };
 
 #endif
-
-#endif // _DXRENDERQUEUE_H_

@@ -1,7 +1,6 @@
-#ifndef _CWORLD_H_
-#define _CWORLD_H_
+#pragma once
 
-#include "System/God.h"
+#include <System/God.h>
 
 class CInputManager;
 class CInstanceManager;
@@ -35,5 +34,3 @@ private:
 	float m_fps;
 	bool m_isPaused;
 };
-
-#endif // _CWORLD_H_

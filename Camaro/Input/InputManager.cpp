@@ -1,13 +1,13 @@
 #include "InputManager.h"
 
 #ifdef USE_BOX2D
-#	include "Physics/Physics.h"
-#	include "Physics/PhysicsModifier.h"
+#	include <Physics/Physics.h>
+#	include <Physics/PhysicsModifier.h>
 #endif
 
-#include "Game/World.h"
+#include <Game/World.h>
 
-#include "Renderer/Renderer.h"
+#include <Renderer/Renderer.h>
 
 #ifdef USE_DIRECTINPUT
 #include "DX/DXKeyboardInput.h"

@@ -1,7 +1,6 @@
-#ifndef _DXRENDERPROXY_H_
-#define _DXRENDERPROXY_H_
+#pragma once
 
-#include "System/God.h"
+#include <System/God.h>
 
 #ifdef USE_DXRENDERER
 
@@ -13,5 +12,3 @@ public:
 };
 
 #endif
-
-#endif // _DXRENDERPROXY_H_

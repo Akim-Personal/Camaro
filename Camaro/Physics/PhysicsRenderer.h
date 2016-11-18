@@ -1,7 +1,6 @@
-#ifndef _CPHYSICSRENDERER_H_
-#define _CPHYSICSRENDERER_H_
+#pragma once
 
-#include "System/God.h"
+#include <System/God.h>
 
 #if defined(USE_BOX2D) && defined(USE_DXRENDERER)
 
@@ -29,5 +28,3 @@ private:
 };
 
 #endif
-
-#endif // _CPHYSICSRENDERER_H_

@@ -1,9 +1,9 @@
 #include "DXGamepadInput.h"
 
 #ifdef USE_XINPUT
-#include "Renderer/Renderer.h"
-#include "Game/World.h"
-#include "../InputManager.h"
+#include <Renderer/Renderer.h>
+#include <Game/World.h>
+#include <Input/InputManager.h>
 
 #pragma comment(lib, "XInput.lib")
 
