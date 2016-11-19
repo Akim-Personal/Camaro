@@ -41,6 +41,6 @@ public:
 
 private:
 	GOD();
-	static bool isAlive;
+	static bool m_isAlive;
 	static bool m_shutdownRequested;
 };

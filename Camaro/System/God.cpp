@@ -19,14 +19,14 @@ HINSTANCE GOD::m_hInst = NULL;
 HWND GOD::m_hWnd = NULL;
 #endif
 
-bool GOD::isAlive = false;
+bool GOD::m_isAlive = false;
 bool GOD::m_shutdownRequested = false;
 
 CRenderer* GOD::m_renderer = NULL;
 
 void GOD::CreateUniverse()
 {
-	if (!isAlive)
+	if (!m_isAlive)
 	{
 		m_memoryAllocator = new CMemoryAllocator();	// start tracking of memory leaks
 		m_clock = new CClock();
@@ -53,13 +53,13 @@ void GOD::CreateUniverse()
 		if (m_renderer && !m_renderer->Init())
 			LogFatalError("Renderer could not be initialized");
 
-		isAlive = true;
+		m_isAlive = true;
 	}
 }
 
 bool GOD::Progress()
 {
-	if (isAlive)
+	if (m_isAlive)
 	{
 		if (m_world) m_world->Update();
 		if (m_renderer) m_renderer->Render();
@@ -77,7 +77,7 @@ bool GOD::Progress()
 
 void GOD::CleanUp()
 {
-	if (isAlive)
+	if (m_isAlive)
 	{
 		SAFE_DELETE(m_renderer);
 #ifdef USE_BOX2D
