@@ -29,7 +29,7 @@ link_libraries(
 
 ##################################################################
 # Create Project
-add_executable(Camaro ${camaro_files})
+add_executable(Camaro ${camaro_files} CMakeFileList.cmake)
 
 # Build order
 add_dependencies(Camaro Box2D)
