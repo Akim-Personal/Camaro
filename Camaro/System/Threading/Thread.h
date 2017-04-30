@@ -18,23 +18,26 @@
 
 class CThread
 {
+public:
+	void StartThread();
+
 protected:
 	CThread();
 	CThread(char* threadName);
 	virtual ~CThread();
-	virtual bool RunLoop() = 0;
 	char* GetThreadName() const { return m_threadName; }
 	uint GetThreadID() const { return m_threadID; }
 	bool IsGoingToShutdown() const { return m_shutdownRequested; }
-	void StartThread();
 	void ForceSafeShutdownThread();
 
-private:
 	uint m_threadID;
+
+private:
 	char* m_threadName;
 	HANDLE m_handle;
 	bool m_shutdownRequested;
 
+	virtual bool RunLoop() = 0;
 	void SetThreadName(uint dwThreadID, char* szThreadName);
 	static unsigned __stdcall func(void *args);
 };

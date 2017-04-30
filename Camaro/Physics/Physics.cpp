@@ -61,8 +61,8 @@ bool CPhysics::Init()
 void CPhysics::Update()
 {
 	m_physicsWorld->Step(m_timeStep, m_velocityIterations, m_positionIterations);
-	m_physicsWorld->Step(m_timeStep, m_velocityIterations, m_positionIterations);
-	m_physicsWorld->Step(m_timeStep, m_velocityIterations, m_positionIterations);
+	//m_physicsWorld->Step(m_timeStep, m_velocityIterations, m_positionIterations);
+	//m_physicsWorld->Step(m_timeStep, m_velocityIterations, m_positionIterations);
 }
 
 void CPhysics::CleanUp()

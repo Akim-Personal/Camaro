@@ -10,6 +10,7 @@
 #define FPS_UPDATE_INTERVAL CLOCK_TICKS_AS_MS(500)
 
 CWorld::CWorld()
+	: CThread("WorldThread")
 {
 	m_inputManager = NULL;
 	m_instanceManager = NULL;
@@ -64,7 +65,7 @@ void CWorld::UpdateFPS()
 	}
 }
 
-void CWorld::Update()
+bool CWorld::Update()
 {
 	UpdateFPS();
 
@@ -80,6 +81,8 @@ void CWorld::Update()
 		if (GOD::m_physics) GOD::m_physics->Update();
 #endif
 	}
+
+	return true;
 }
 
 void CWorld::Pause()

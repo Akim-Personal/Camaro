@@ -54,6 +54,10 @@ void GOD::CreateUniverse()
 			LogFatalError("Renderer could not be initialized");
 
 		m_isAlive = true;
+
+		// Start most important threads
+		if (m_world) m_world->StartThread();
+		if (m_renderer) m_renderer->StartThread();
 	}
 }
 
@@ -61,9 +65,6 @@ bool GOD::Progress()
 {
 	if (m_isAlive)
 	{
-		if (m_world) m_world->Update();
-		if (m_renderer) m_renderer->Render();
-
 		if (m_shutdownRequested)
 		{
 			LogInfo("Shutdown has been requested by user");
@@ -80,10 +81,11 @@ void GOD::CleanUp()
 	if (m_isAlive)
 	{
 		SAFE_DELETE(m_renderer);
+		SAFE_DELETE(m_world);
+
 #ifdef USE_BOX2D
 		SAFE_DELETE(m_physics);
 #endif
-		SAFE_DELETE(m_world);
 
 		LogInfo("God has successfully released resources. Going to shutdown remaining system helpers ...");
 		SAFE_DELETE(m_log);

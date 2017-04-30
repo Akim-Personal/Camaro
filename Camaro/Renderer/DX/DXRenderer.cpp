@@ -10,6 +10,8 @@
 #include "DXDebugRenderer.h"
 #include "DXRenderQueue.h"
 
+uint* renderThreadID = nullptr;
+
 DXRenderer::DXRenderer()
 {
 	m_dxD3D = NULL;
@@ -133,16 +135,16 @@ void DXRenderer::UpdateCamera()
 	m_dxD3DDevice->SetTransform(D3DTS_VIEW, m_viewMatrix);
 }
 
-void DXRenderer::Render()
+bool DXRenderer::Render()
 {
-	// Clear the backbuffer to a black color
+	// Clear the backbuffer
 	m_dxD3DDevice->Clear(0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, D3DCOLOR_XRGB(170, 170, 255), 1.0f, 0);
 
 	// Begin the scene
 	if (SUCCEEDED(m_dxD3DDevice->BeginScene()))
 	{
 		UpdateCamera();
-
+		
 #ifdef USE_BOX2D
 		GOD::m_physics->GetPhysicsWorld()->DrawDebugData();
 #endif
@@ -155,6 +157,8 @@ void DXRenderer::Render()
 
 	// Present the backbuffer to the display.
 	m_dxD3DDevice->Present(NULL, NULL, NULL, NULL);
+
+	return true;
 }
 
 #endif

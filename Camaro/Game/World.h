@@ -1,18 +1,23 @@
 #pragma once
 
 #include <System/God.h>
+#include <System/Threading/Thread.h>
 
 class CInputManager;
 class CInstanceManager;
 
-class CWorld
+class CWorld : public CThread
 {
 public:
 	CWorld();
-	~CWorld() { CleanUp(); }
+	~CWorld()
+	{
+		ForceSafeShutdownThread();
+		CleanUp();
+	}
 
 	bool Init();
-	void Update();
+	bool Update();
 
 	void Pause();
 	void Resume();
@@ -27,6 +32,8 @@ public:
 private:
 	void CleanUp();
 	void UpdateFPS();
+
+	bool RunLoop() { return Update(); }
 
 	CInputManager* m_inputManager;
 	CInstanceManager* m_instanceManager;

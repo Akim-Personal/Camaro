@@ -4,17 +4,30 @@
 
 #ifdef USE_DXRENDERER
 
-#include "Renderer/DX/DXRenderer.h"
+#include <System/Threading/Thread.h>
+#include "DX/DXRenderer.h"
 class DXDebugRenderer;
 
-class CRenderer
+extern uint* renderThreadID;
+
+class CRenderer : public CThread
 {
 public:
-	CRenderer() { m_dxRenderer = new DXRenderer(); }
-	~CRenderer() { SAFE_DELETE(m_dxRenderer); }
+	CRenderer()
+		: CThread("RenderThread") 
+	{
+		m_dxRenderer = new DXRenderer();
+		renderThreadID = &m_threadID;
+	}
+
+	~CRenderer()
+	{
+		ForceSafeShutdownThread();
+		SAFE_DELETE(m_dxRenderer); 
+	}
 
 	bool Init() { return m_dxRenderer->Init(); }
-	void Render() { m_dxRenderer->Render(); }
+	bool Render() { return m_dxRenderer->Render(); }
 
 	LPDIRECT3DVERTEXBUFFER9 GetVertexBuffer() { return m_dxRenderer->GetVertexBuffer(); }
 	LPDIRECT3D9 GetD3D() const { return m_dxRenderer->GetD3D(); }
@@ -28,12 +41,15 @@ public:
 	void SetWorldMatrix(const D3DXMATRIX& mat) { m_dxRenderer->SetWorldMatrix(mat); }
 
 	D3DXVECTOR3 GetCameraPosition() { return m_dxRenderer->GetCameraPosition(); }
-	void SetCameraPosition(D3DXVECTOR3 camPos) { m_dxRenderer->SetCameraPosition(camPos); }
 
 	DXDebugRenderer* GetDebugRenderer() const { return m_dxRenderer->GetDebugRenderer(); }
 	DXRenderQueue* GetRenderQueue() const { return m_dxRenderer->GetRenderQueue(); }
 
 private:
+	virtual bool RunLoop() { return Render(); }
+
+	void SetCameraPosition(D3DXVECTOR3 camPos) { m_dxRenderer->SetCameraPosition(camPos); }
+
 	DXRenderer* m_dxRenderer;
 };
 

@@ -14,7 +14,7 @@ public:
 	~DXRenderer() { CleanUp(); }
 
 	bool Init();
-	void Render();
+	bool Render();
 
 	LPDIRECT3DVERTEXBUFFER9 GetVertexBuffer() { return m_vertexBuffer; }
 	LPDIRECT3D9 GetD3D() const { return m_dxD3D; }

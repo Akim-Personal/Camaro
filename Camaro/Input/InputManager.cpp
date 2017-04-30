@@ -138,13 +138,14 @@ void CInputManager::InterpretInputStates()
 		if (KEY_PRESSED(m_keyboardInputState, e_Key_Right))
 		{
 #ifdef USE_DXRENDERER
-			renderer->SetCameraPosition(renderer->GetCameraPosition() + D3DXVECTOR3(0.3f, 0.0f, 0.0f));
+			// TODO: We cannot simply change the camera position from outside Render Thread - instead make a call to render command queue
+			//renderer->SetCameraPosition(renderer->GetCameraPosition() + D3DXVECTOR3(0.3f, 0.0f, 0.0f));
 #endif
 		}
 		if (KEY_PRESSED(m_keyboardInputState, e_Key_Left))
 		{
 #ifdef USE_DXRENDERER
-			renderer->SetCameraPosition(renderer->GetCameraPosition() + D3DXVECTOR3(-0.3f, 0.0f, 0.0f));
+			//renderer->SetCameraPosition(renderer->GetCameraPosition() + D3DXVECTOR3(-0.3f, 0.0f, 0.0f));
 #endif
 		}
 		if (KEY_UP(m_keyboardInputState, e_Key_ESC))
@@ -201,13 +202,20 @@ void CInputManager::InterpretInputStates()
 
 #ifdef USE_DXRENDERER
 				if (m_gamepadInputState[i].normalized_thumb_rx != 0 || m_gamepadInputState[i].normalized_thumb_ry != 0)
-					renderer->SetCameraPosition(renderer->GetCameraPosition() + D3DXVECTOR3(m_gamepadInputState[i].normalized_thumb_rx, m_gamepadInputState[i].normalized_thumb_ry, 0.0f));
+				{
+					// TODO: We cannot simply change the camera position from outside Render Thread - instead make a call to render command queue
+					//renderer->SetCameraPosition(renderer->GetCameraPosition() + D3DXVECTOR3(m_gamepadInputState[i].normalized_thumb_rx, m_gamepadInputState[i].normalized_thumb_ry, 0.0f));
+				}
 
 				if (m_gamepadInputState[i].normalized_trigger_lt != 0)
-					renderer->SetCameraPosition(renderer->GetCameraPosition() + D3DXVECTOR3(0.0f, 0.0f, -m_gamepadInputState[i].normalized_trigger_lt));
+				{
+					//renderer->SetCameraPosition(renderer->GetCameraPosition() + D3DXVECTOR3(0.0f, 0.0f, -m_gamepadInputState[i].normalized_trigger_lt));
+				}
 
 				if (m_gamepadInputState[i].normalized_trigger_rt != 0)
-					renderer->SetCameraPosition(renderer->GetCameraPosition() + D3DXVECTOR3(0.0f, 0.0f, m_gamepadInputState[i].normalized_trigger_rt));
+				{
+					//renderer->SetCameraPosition(renderer->GetCameraPosition() + D3DXVECTOR3(0.0f, 0.0f, m_gamepadInputState[i].normalized_trigger_rt));
+				}
 #endif
 			}
 		}

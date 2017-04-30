@@ -13,14 +13,15 @@ class DXGamepadInput;
 #endif
 
 enum EKeys
-{	
-	e_Key_Down		  = 0x01,
-	e_Key_Up				= 0x02,
-	e_Key_Left			= 0x04,
-	e_Key_Right			= 0x08,
-	e_Key_Space			= 0x10,
-	e_Key_ESC				= 0x20,
-	e_Key_P					= 0x40
+{
+	e_Key_Undefined   = 0x00,
+	e_Key_Down        = 0x01,
+	e_Key_Up          = 0x02,
+	e_Key_Left        = 0x04,
+	e_Key_Right       = 0x08,
+	e_Key_Space       = 0x10,
+	e_Key_ESC         = 0x20,
+	e_Key_P           = 0x40
 };
 
 class CInputManager
@@ -44,8 +45,8 @@ void SetGamepadInputState(const CONTROLLER_STATE* inputState, int count);
 private:
 	struct KEYBOARD_STATE
 	{
-		uint lastState;
-		uint state;
+		uint lastState = 0;
+		uint state = 0;
 	};
 
 	void InterpretInputStates();
