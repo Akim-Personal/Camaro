@@ -1,0 +1,62 @@
+Vertexbuffer:
+http://www.gamedev.net/page/resources/_/technical/game-programming/using-vertex-buffers-with-directx-r1946 
+
+-------------------------
+Threading:
+msdn.microsoft.com/en-us/library/windows/desktop/ee416321(v=vs.85).aspx
+
+-------------------------
+NumLimits:
+http://www.cplusplus.com/reference/limits/numeric_limits/
+
+-------------------------
+Boost:
+https://www.quantnet.com/threads/c-multithreading-in-boost.10028/
+http://www.codeproject.com/Articles/677343/Asynchronous-calls-in-Cplusplus-and-MFC-using-boos 
+
+-------------------------
+uint to byte array:
+
+(byte*& buffer, uint command)
+
+*(uint*)buffer = command;
+
+
+Or?
+ 
+
+(byte* buffer, uint command)
+
+*(uint*)buffer = command;
+
+ 
+Consider memcpy
+
+-------------------------
+CALLOC:
+
+While calloc() always initializes the memory area with zeroes ('\0'), the memset() call allows you to choose which bytes to fill the memory with.
+
+In terms of speed, calloc() is likely to be faster than malloc() + memset(), given that uninitialized memory is faster to return.
+
+Basically, if you want to zero out the memory, use calloc(); if you want to leave it uninitialized, use malloc().
+
+-------------------------
+XML Parse: Use Expat
+
+-------------------------
+Optimizing game:
+-GetLogicalProcessorInformation
+-Don't decide which core to run on for Windows. Only for Xbox360
+-Thread pools?
+-CriticalSection is faster than Mutex but process bound
+-Events
+-Avoid SuspendThread! -> Use WaitForSingleObject or WaitForMultipleObject
+-Interlocked functions
+-Lockless programming?
+-declspec(thread) TLS -> TLSAlloc for DLLs
+-Don't call terminateThread
+-Don't use OpenMP
+-QueryPerformanceCounter or QueryPerformanceFrequency instead of clock() ? RDTSL
+-SetThreadName
+-run clock() always on same thread (in main)
